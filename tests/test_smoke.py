@@ -11,6 +11,7 @@ def test_repository_smoke():
         assert (submission / name).exists(), name
 
     assert (assets / 'dashboard.html').exists()
+    assert (root / 'dashboard.html').exists()
 
     config = json.loads((submission / 'config.json').read_text(encoding='utf-8'))
     assert len(config.get('body', '').split()) == 156
