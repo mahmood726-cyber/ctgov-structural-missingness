@@ -1,0 +1,57 @@
+{
+  "title": "CT.gov Structural Missingness",
+  "slug": "ctgov-structural-missingness",
+  "author": "Mahmood Ahmad",
+  "date": "2026-03-29",
+  "path": "C:\\Projects\\ctgov-structural-missingness",
+  "type": "methods",
+  "primary_estimand": "Field-level structural missingness across the full registry",
+  "summary": "A standalone E156 project on the descriptive fields that disappear from ClinicalTrials.gov even before results reporting is considered.",
+  "body": "What information disappears from ClinicalTrials.gov even before one asks whether results were posted? We analysed the March 29, 2026 full-registry snapshot and quantified structural missingness in publication links, IPD statements, detailed descriptions, locations, and outcome fields across sponsor groups. The source universe included 578,109 studies, allowing field-level omission rates and sponsor-specific sparsity patterns to be estimated without sampling. Across the full registry, 63.4 percent of records lacked publication links, 48.3 percent lacked IPD sharing statements, 32.7 percent lacked detailed descriptions, and 10.2 percent lacked locations. Structural sparsity was not evenly distributed: industry remained heavily affected, NIH had the highest average hiddenness score among named sponsor classes, and UNKNOWN mostly reflected malformed metadata. Missingness therefore extends beyond results reporting into the descriptive fields needed for interpretation, replication, and scrutiny, with the loss being less context for appraisal, replication, accountability, and public scrutiny across therapeutic areas. These metrics capture registry-visible information loss rather than proven intent to conceal.",
+  "sentences": [
+    {
+      "role": "Question",
+      "text": "What information disappears from ClinicalTrials.gov even before one asks whether results were posted?"
+    },
+    {
+      "role": "Dataset",
+      "text": "We analysed the March 29, 2026 full-registry snapshot and quantified structural missingness in publication links, IPD statements, detailed descriptions, locations, and outcome fields across sponsor groups."
+    },
+    {
+      "role": "Method",
+      "text": "The source universe included 578,109 studies, allowing field-level omission rates and sponsor-specific sparsity patterns to be estimated without sampling."
+    },
+    {
+      "role": "Primary result",
+      "text": "Across the full registry, 63.4 percent of records lacked publication links, 48.3 percent lacked IPD sharing statements, 32.7 percent lacked detailed descriptions, and 10.2 percent lacked locations."
+    },
+    {
+      "role": "Secondary result",
+      "text": "Structural sparsity was not evenly distributed: industry remained heavily affected, NIH had the highest average hiddenness score among named sponsor classes, and UNKNOWN mostly reflected malformed metadata."
+    },
+    {
+      "role": "Interpretation",
+      "text": "Missingness therefore extends beyond results reporting into the descriptive fields needed for interpretation, replication, and scrutiny, with the loss being less context for appraisal, replication, accountability, and public scrutiny across therapeutic areas."
+    },
+    {
+      "role": "Boundary",
+      "text": "These metrics capture registry-visible information loss rather than proven intent to conceal."
+    }
+  ],
+  "notes": {
+    "app": "CT.gov Structural Missingness dashboard",
+    "data": "578,109 ClinicalTrials.gov records from the March 29, 2026 full-registry snapshot",
+    "code": "https://github.com/mahmood726-cyber/ctgov-structural-missingness",
+    "doi": "",
+    "version": "1.0.0",
+    "date": "2026-03-29",
+    "validation": "FULL REGISTRY RUN"
+  },
+  "affiliation": "Tahir Heart Institute",
+  "email": "author@example.com",
+  "references": [
+    "ClinicalTrials.gov API v2. National Library of Medicine. Accessed March 29, 2026.",
+    "Page MJ, McKenzie JE, Bossuyt PM, et al. The PRISMA 2020 statement. BMJ. 2021;372:n71.",
+    "Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to Meta-Analysis. 2nd ed. Wiley; 2021."
+  ]
+}

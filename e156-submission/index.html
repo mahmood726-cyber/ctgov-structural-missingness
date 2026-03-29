@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CT.gov Structural Missingness</title>
+  <style>
+    :root{
+      --bg:#f8f5ef;
+      --paper:#fffdfa;
+      --ink:#111;
+      --muted:#5d584f;
+      --line:#ddd4c6;
+      --line-strong:#b7ab99;
+      --accent:#326891;
+      --gold:#8b6914;
+      --sans:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+      --serif:Georgia,"Times New Roman",serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--serif);
+      background:
+        radial-gradient(circle at top left, rgba(50,104,145,.10), transparent 28%),
+        linear-gradient(180deg, #fcfbf7 0%, var(--bg) 100%);
+      color:var(--ink);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:var(--accent);text-decoration:none}
+    .page{max-width:1120px;margin:0 auto;padding:20px 18px 48px}
+    .masthead{
+      display:flex;justify-content:space-between;gap:18px;align-items:end;
+      border-top:1px solid var(--line-strong);border-bottom:3px double var(--line);
+      padding:10px 0 18px;margin-bottom:24px
+    }
+    .brand{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.03em}
+    .brand-meta{max-width:40ch;font:11px/1.6 var(--sans);text-transform:uppercase;letter-spacing:.16em;color:var(--muted);text-align:right}
+    .hero{
+      background:rgba(255,255,255,.92);border:1px solid var(--line);border-top:4px solid var(--ink);
+      padding:32px clamp(18px,4vw,40px);margin-bottom:24px;box-shadow:0 16px 38px rgba(17,17,17,.045)
+    }
+    .eyebrow{font:700 11px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+    h1{font-size:clamp(38px,6vw,68px);line-height:.98;letter-spacing:-.05em;margin:0 0 14px;max-width:13ch}
+    .lede{font-size:clamp(18px,2.2vw,24px);line-height:1.62;color:#474037;max-width:60rem;margin:0}
+    .hero-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
+    .hero-rail div{background:rgba(255,255,255,.7);border-top:1px solid var(--line-strong);padding:12px 14px;font:11px var(--sans);text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,.95fr);gap:24px}
+    .card{background:rgba(255,255,255,.93);border:1px solid var(--line);padding:22px 22px 24px;box-shadow:0 14px 28px rgba(17,17,17,.04)}
+    .section-title{font:700 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-bottom:10px;border-bottom:1px solid var(--line);margin:0 0 16px}
+    .body-copy{font-size:clamp(22px,2.1vw,30px);line-height:1.78;max-width:30ch;margin:0}
+    .body-copy::first-letter{float:left;font-size:72px;line-height:.85;padding-right:10px;padding-top:8px;font-weight:700;color:var(--gold)}
+    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0 24px}
+    .metric{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);padding:16px;border-radius:8px}
+    .metric-label{font:700 10px var(--sans);letter-spacing:.15em;text-transform:uppercase;color:#777;margin-bottom:8px}
+    .metric-value{font-size:30px;font-weight:700;line-height:1.05}
+    .metric-note{font:12px var(--sans);color:#888;margin-top:6px}
+    .note-grid{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font:13px var(--sans);color:#444}
+    .note-grid dt{font-weight:700;color:#222}
+    .bullet-list{display:grid;gap:10px;padding-left:18px}
+    .links{display:grid;gap:12px}
+    .link-card{display:block;padding:15px 16px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);font:600 15px var(--sans);color:#1b1b1b;border-radius:8px}
+    .chart-wrap{margin:18px 0 26px}
+    .chart-caption{font:12px var(--sans);color:#666;margin-top:10px}
+    .kicker{font:700 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+    .story-block{margin-bottom:26px}
+    .footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font:12px var(--sans);color:#8f887e}
+    .footer a{color:var(--accent)}
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .hero-rail{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .brand-meta{text-align:left}
+      .masthead{display:block}
+    }
+    @media (max-width:640px){
+      .page{padding:14px 12px 40px}
+      .hero{padding:24px 18px}
+      .hero-rail{grid-template-columns:1fr}
+      .body-copy{font-size:22px}
+    }
+    </style>
+</head>
+<body>
+  <div class="page">
+    <div class="masthead">
+      <div class="brand">CT.gov Structural Missingness</div>
+      <div class="brand-meta">2026-03-29 | full-registry ct.gov audit | plots, figures, and e156 bundle</div>
+    </div>
+    <section class="hero">
+      <div class="eyebrow">E156 Micro-Paper</div>
+      <h1>CT.gov Structural Missingness</h1>
+      <p class="lede">A 156-word micro-paper on what disappears from the registry before results reporting is even considered.</p>
+      <div class="hero-rail"><div>Publication links</div><div>IPD statements</div><div>Descriptions</div><div>Locations</div></div>
+    </section>
+    <div class="grid">
+      <main><article class='card'><h2 class='section-title'>Paper</h2><p class='body-copy'>What information disappears from ClinicalTrials.gov even before one asks whether results were posted? We analysed the March 29, 2026 full-registry snapshot and quantified structural missingness in publication links, IPD statements, detailed descriptions, locations, and outcome fields across sponsor groups. The source universe included 578,109 studies, allowing field-level omission rates and sponsor-specific sparsity patterns to be estimated without sampling. Across the full registry, 63.4 percent of records lacked publication links, 48.3 percent lacked IPD sharing statements, 32.7 percent lacked detailed descriptions, and 10.2 percent lacked locations. Structural sparsity was not evenly distributed: industry remained heavily affected, NIH had the highest average hiddenness score among named sponsor classes, and UNKNOWN mostly reflected malformed metadata. Missingness therefore extends beyond results reporting into the descriptive fields needed for interpretation, replication, and scrutiny, with the loss being less context for appraisal, replication, accountability, and public scrutiny across therapeutic areas. These metrics capture registry-visible information loss rather than proven intent to conceal.</p><div class='metrics'><div class='metric'><div class='metric-label'>No publication link</div><div class='metric-value'>63.4%</div><div class='metric-note'>All studies</div></div><div class='metric'><div class='metric-label'>No IPD statement</div><div class='metric-value'>48.3%</div><div class='metric-note'>All studies</div></div><div class='metric'><div class='metric-label'>No description</div><div class='metric-value'>32.7%</div><div class='metric-note'>All studies</div></div><div class='metric'><div class='metric-label'>No locations</div><div class='metric-value'>10.2%</div><div class='metric-note'>All studies</div></div></div></article></main>
+      <aside class="card"><h2 class='section-title'>Outside Notes</h2><dl class='note-grid'><dt>App</dt><dd>CT.gov Structural Missingness dashboard</dd><dt>Data</dt><dd>578,109 ClinicalTrials.gov records from the March 29, 2026 full-registry snapshot</dd><dt>Code</dt><dd><a href='https://github.com/mahmood726-cyber/ctgov-structural-missingness'>https://github.com/mahmood726-cyber/ctgov-structural-missingness</a></dd><dt>Version</dt><dd>1.0.0</dd></dl><div class='links'><a class='link-card' href='assets/dashboard.html'>Dashboard</a><a class='link-card' href='paper.md'>Paper markdown</a><a class='link-card' href='protocol.md'>Protocol markdown</a></div></aside>
+    </div>
+    <div class="footer">
+      <a href="https://github.com/mahmood726-cyber/ctgov-structural-missingness">Source on GitHub</a> |
+      <a href="https://mahmood726-cyber.github.io/ctgov-structural-missingness/">Project home</a> |
+      <a href="https://mahmood726-cyber.github.io/ctgov-structural-missingness/e156-submission/assets/dashboard.html">Dashboard</a>
+    </div>
+  </div>
+</body>
+</html>
