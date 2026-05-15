@@ -3,7 +3,7 @@
   "slug": "ctgov-structural-missingness",
   "author": "Mahmood Ahmad",
   "date": "2026-03-29",
-  "path": "C:\\Projects\\ctgov-structural-missingness",
+  "path": "C:\\Projects\\ctgov-analyses/ctgov-structural-missingness",
   "type": "methods",
   "primary_estimand": "Field-level structural missingness across the full registry",
   "summary": "A standalone E156 project on the descriptive fields that disappear from ClinicalTrials.gov even before results reporting is considered.",
@@ -48,10 +48,11 @@
     "validation": "FULL REGISTRY RUN"
   },
   "affiliation": "Tahir Heart Institute",
-  "email": "author@example.com",
+  "email": "mahmood.ahmad2@nhs.net",
   "references": [
     "ClinicalTrials.gov API v2. National Library of Medicine. Accessed March 29, 2026.",
     "Page MJ, McKenzie JE, Bossuyt PM, et al. The PRISMA 2020 statement. BMJ. 2021;372:n71.",
     "Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to Meta-Analysis. 2nd ed. Wiley; 2021."
-  ]
+  ],
+  "submitted": false
 }
