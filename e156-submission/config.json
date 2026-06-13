@@ -3,7 +3,7 @@
   "slug": "ctgov-structural-missingness",
   "author": "Mahmood Ahmad",
   "date": "2026-03-29",
-  "path": "C:\\Projects\\ctgov-analyses/ctgov-structural-missingness",
+  "path": "https://github.com/mahmood726-cyber/ctgov-structural-missingness",
   "type": "methods",
   "primary_estimand": "Field-level structural missingness across the full registry",
   "summary": "A standalone E156 project on the descriptive fields that disappear from ClinicalTrials.gov even before results reporting is considered.",
